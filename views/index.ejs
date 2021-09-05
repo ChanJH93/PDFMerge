@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PDFCLOVER</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/css/clover.ico">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+       <img class="navbar-brand" src="/css/cloverpic.png" alt="">
+        <p class="navbar-brand">PDFCLOVER</p>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="Merge"><a href="/">Merge</a></li>
+        <li id="Split"><a href="/">Split</a></li>
+        <li id="Rotate"><a href="/">Rotate</a></li>
+        <li id="Convert Word"><a href="/">Compress</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Heading -->
+  <div class="title">
+    <h1 class="heading">Merge PDF</h1>
+    <p class="text">Easiest way to combine multiple PDF files</p>
+  </div>
+
+  <!-- Dropzone to drag and drop files -->
+  <!-- <div class="droparea"> -->
+  <form class="dropzone" id="droparea" action="/" method="post" enctype="multipart/form-data">
+    <div class="dz-message needsclick dragText dz-progess">
+      <div class="icon"><i class="far fa-file-pdf fa-2x"></i></div><br>
+      Click or Drag & Drop to Upload Files
+    </div>
+  </form>
+
+<div class="message hide" id="message">
+  <p>Successfully merged files ! Click the Download button to download the merged file.</p>
+</div>
+
+<div id="myProgress" class="progress hide">
+  <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+  <!-- Button to merge file -->
+  <div class="buttons">
+    <button id="merge" class="btn btn-lg btn-primary mergeButton" type="button" name="button">Merge</button>
+    <button id="reload" class="btn btn-lg btn-secondary reloadButton hide" type="button" name="button">Reload</button>
+    <form class="" action="/download" method="get">
+      <button class="btn btn-lg btn-success download hide" id="download" type="submit" name="button">Download</button>
+    </form>
+  </div>
+</body>
+
+<footer>
+    <div class="footer">
+      <p>Copyright © <span id="year"></span> PDFCLOVER</p>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.js"></script>
+<script src="/js/script.js"></script>
+</html>
